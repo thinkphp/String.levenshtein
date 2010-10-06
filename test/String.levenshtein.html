@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html> 
+<head> 
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>String.method(string) => myString.levenshtein(string);</title> 
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css"> 
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/base/base.css" type="text/css">
+   <style type="text/css">
+    html,body {background: #ccc;font-family: georgia,arial,verdana,sans-serif} 
+    #doc {background: #fff;border: 1em solid #fff;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius: 10px;-moz-box-shadow: 4px 4px 4px rgba(33, 33, 33, 0.4);} 
+    h1{font-family:calibri,sans-serif;color:#111;font-size:200%;font-weight:bold;}
+    #ft {font-size:80%;color:#888;text-align:left;margin:2em 0;font-size: 12px}
+    #ft p a{color:#393;}
+   </style>
+   <script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+   <script type="text/javascript">google.load("mootools", "1.2.4");</script>  
+   <script type="text/javascript" src="String.levenshtein-yui-compressed.js"></script>   
+</head> 
+<body> 
+   <div id="doc" class="yui-t7"> 
+    <div id="hd" role="banner"><h1>Levenshtein Distance</h1></div> 
+    <p>String.levenshtein(myString) - calculate Levenshtein distance between two strings</p>
+    <div id="bd" role="main"> 
+<pre><code>
+var words = ["rodion","dunia","raskolnikov","adrian","statescu",
+             "sunday","saturday","jquery","mootools","dojo"];
+
+function matchWords(input) {
+
+            return words.filter(function(word){
+
+              //compute levensthein distance
+              var lev = word.levenshtein(input);  
+
+              if(lev >=0 && lev <= 3 ) {
+
+                  return word;
+              }
+
+            });    
+}
+
+Example => Enter: rascolnicov
+                  (approximate string match: 'raskolnikov')
+                  sandei   
+                  (approximate string match: 'sunday')
+
+</code></pre>
+     <p><label for="string">Enter a word: </label> <input type="text" id="string" /></p> 
+     <div id="results"> 
+     </div>
+    </div><!-- end bd --> 
+ <div id="ft"><p>Created by @<a href="http://twitter.com/thinkphp">thinkphp</a> | source code on <a href="http://mootools.net/forge/download/string_levenshtein/v1.0">forge</a></p></div>
+</div><!--end doc -->
+<script type="text/javascript">
+(function(){
+   var words = ["rodion","dunia","raskolnikov","adrian","statescu","sunday","saturday","jquery","mootools","dojo"];
+   
+   function matchWords(input) {
+
+            return words.filter(function(word){
+
+              //compute levensthein distance
+              var lev = word.levenshtein(input);  
+
+              if(lev >=0 && lev <= 3 ) {
+
+                  return word;
+              }
+
+            });    
+     }
+
+     $('string').addEvent('keyup',function(e){
+            if(e) {e.stop();}
+            var input = this.get('value');  
+            var similarities = matchWords(input);
+            $('results').set('html',' Did you mean: <b>' + similarities + '</b>');
+     })
+
+     var input = "rascolnicov";
+     var similarities = matchWords(input);
+     if(window.console) console.log("Did you mean: " + similarities);
+     var similar = matchWords("motols"); 
+     if(window.console) console.log("Did you mean: " + similar);     
+})();
+</script>
+</body> 
+</html> 
