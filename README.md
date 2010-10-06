@@ -1,11 +1,12 @@
 String.levenshtein
 ==================
 
-  In information theory and computer science, the Levenshtein distance is a metric for 
-  measuring the amount of difference between two sequences (called edit distance). 
-  The Levenshtein distance between two strings is given by minimum number of operations 
-  needed to transform one string into another given string, where possible operations are insertion,
-  deletion, or substitution of a single character. The Levenshtein distance algorithm has been used in: 
+  This method calculate Levenshtein distance between two strings. In information theory and computer 
+  science, the Levenshtein distance is a metric for measuring the amount of difference between two 
+  sequences (called edit distance). The Levenshtein distance between two strings is given by minimum 
+  number of operations needed to transform one string into another given string, where possible operations 
+  are insertion, deletion, or substitution of a single character. 
+  The Levenshtein distance algorithm has been used in: 
        * Spell checking
        * Speech recognition
        * DNA analysis
