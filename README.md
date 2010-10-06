@@ -14,39 +14,38 @@ String.levenshtein
   The complexity of the algorithm is O(mXn), where n and m are the length of string1 and string2.
 
 
-![Screenshot]()
+![Screenshot](http://)
 
 
 How to use
 ----------
 
-   First you must to include the JS files in the head of your HTML document.
-       
-   #HTML
-   <script type="text/javascript" src="mootools.js"></script>
-   <script type="text/javascript" src="String.levenshtein.js"></script>
+         First you must to include the JS files in the head of your HTML document.
 
-   In your JavaScript code.
+            #HTML
+            <script type="text/javascript" src="mootools.js"></script>
+            <script type="text/javascript" src="String.levenshtein.js"></script>
 
-   #JS     
-   var words = ["rodion","dunia","raskolnikov","adrian","statescu","sunday","saturday","jquery","mootools","dojo"];
+         In your JavaScript code.
 
-   function matchWords(input) {
+           #JavaScript     
+           var words = ["rodion","dunia","raskolnikov","adrian","statescu","sunday","saturday","jquery","mootools","dojo"];
+           function matchWords(input) {
 
-            return words.filter(function(word){
+              return words.filter(function(word){
 
-              //compute levensthein distance
-              var lev = word.levenshtein(input);  
+                //compute levensthein distance
+                var lev = word.levenshtein(input);  
 
-              if(lev >=0 && lev <= 3 ) {
+                if(lev >=0 && lev <= 3 ) {
 
-                  return word;
-              }
+                   return word;
+                }
 
-            });    
-     }
-     var input = "rascolnicov";
-     var similarities = matchWords(input);
-     if(window.console) console.log("Did you mean: " + similarities);
-     var similar = matchWords("motols"); 
-     if(window.console) console.log("Did you mean: " + similar);     
+             });    
+            }
+            var input = "rascolnicov";
+            var similarities = matchWords(input);
+            if(window.console) console.log("Did you mean: " + similarities);
+            var similar = matchWords("motols"); 
+            if(window.console) console.log("Did you mean: " + similar);     
