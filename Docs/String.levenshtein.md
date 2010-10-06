@@ -1,5 +1,5 @@
 String method: levenshtein (#String: levenshtein)
--------------------------------------------------
+=================================================
 
 Calculate Levenshtein distance between two strings. The Levenshtein distance is defined as the 
 minimal number of characters you have to replace, insert or delete to transform string1 into string2.
