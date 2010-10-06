@@ -2,6 +2,6 @@ name: String.levenshtein
 author: thinkphp
 current: v1.0  
 category: utilities 
-tags: [algoritm, distance,levenshtein,string,similary]
+tags: [algorithm,distance,levenshtein,string,similary,metric,approximate,match]
 docs: http://github.com/thinkphp/String.levenshtein/blob/master/Docs/String.levenshtein.md 
 demo: http://thinkphp.ro/apps/js-hacks/String.levenshtein/String.levenshtein.html
