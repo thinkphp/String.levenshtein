@@ -14,7 +14,7 @@ String.levenshtein
   The complexity of the algorithm is O(mXn), where n and m are the length of string1 and string2.
 
 
-![Screenshot](http://)
+![Screenshot](http://www.levenshtein.net/images/levenshtein_meilenstein_matrix.gif)
 
 
 How to use
