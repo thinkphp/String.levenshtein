@@ -35,9 +35,10 @@ In your JavaScript code.
 
               return words.filter(function(word){
 
-                //compute levensthein distance
+                //calculates levenshtein distance
                 var lev = word.levenshtein(input);  
 
+                //in this case the distance is in the iterval [0,1,2,3];
                 if(lev >=0 && lev <= 3 ) {
 
                    return word;
