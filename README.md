@@ -20,13 +20,13 @@ String.levenshtein
 How to use
 ----------
 
-         First you must to include the JS files in the head of your HTML document.
+First you must to include the JS files in the head of your HTML document.
 
             #HTML
             <script type="text/javascript" src="mootools.js"></script>
             <script type="text/javascript" src="String.levenshtein.js"></script>
 
-         In your JavaScript code.
+In your JavaScript code.
 
            #JavaScript     
            var words = ["rodion","dunia","raskolnikov","adrian","statescu","sunday","saturday","jquery","mootools","dojo"];
