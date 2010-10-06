@@ -1,3 +1,21 @@
+/*
+---
+description: calculate Levenshtein distance between two strings.
+
+authors:
+  - Adrian Statescu (http://thinkphp.ro)
+
+license:
+  - MIT-style license
+
+requires:
+  core/1.2.1:   '*'
+
+provides:
+  - String.levenshtein
+...
+*/
+
 String.implement({
 
           levenshtein: function(str) {
