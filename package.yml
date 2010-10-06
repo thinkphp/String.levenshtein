@@ -4,4 +4,4 @@ current: v1.0
 category: utilities 
 tags: [algoritm distance levenshtein string similary]
 docs: http://github.com/thinkphp/String.levenshtein/blob/master/Docs/String.levenshtein.md 
-demo: http://thinkphp.ro/apps/js-hacks/String.levenshtein/String.levenshtein.html 
+demo: http://thinkphp.ro/apps/js-hacks/String.levenshtein/String.levenshtein.html
